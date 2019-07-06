@@ -1,0 +1,8 @@
+.row {
+    background: rgb(161, 89, 143);
+  background-color:#B1A296;
+  border:3px solid rgb(3, 3, 3);
+  width:800px;
+  padding: 12px;
+  text-align: left;
+}

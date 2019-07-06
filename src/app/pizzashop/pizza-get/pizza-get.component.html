@@ -1,0 +1,61 @@
+
+<h3>
+<div class="container">
+    <a routerLink="/pizza/create">Add Pizza</a>
+     <!-- <div class="row" *ngFor="let employee of employees" (click)="onSelection(employee)" > -->
+
+            <div class="row" *ngFor="let pizzashop of pizzashops"  >
+        <div class="col-md-2"> {{pizzashop.pizzaId}}</div>
+        <div class="col-md-2"> {{pizzashop.pizzaName}}</div>
+        <div class="col-md-2"> {{pizzashop.price}}</div>
+        <div class="col-md-2"><a routerLink="/pizza/delete/{{pizzashop.pizzaId}}">Delete</a></div>
+       <div class="col-md-2" (click)="onSelection(pizzashop)">Click for edit</div>
+    </div> 
+   
+    <!-- <table class="table">
+            <thead>
+              <tr>
+                <th>pizzaId</th>
+                <th>Name</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                    <div class="row" *ngFor="let pizzashop of pizzashops" >
+                <td> {{pizzashop.pizzaId}}</td>
+                <td>{{pizzashop.pizzaName}}</td>
+                <td> {{pizzashop.price}}</td>
+                </div>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+</h3>
+     -->
+    <div *ngIf="selectedPizza" class="selectedPizza">
+        <app-pizza-edit [pizzashop]="selectedPizza"></app-pizza-edit>
+    </div>
+    
+
+    <!-- <table class="table">
+            <thead>
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                    <div class="row" *ngFor="let pizzashop of pizzashops"  >
+                            
+                <td> {{pizzashop.pizzaId}}</td>
+                <td>{{pizzashop.pizzaName}}</td>
+                <td> {{pizzashop.price}}</td>
+                </div>
+              </tr>
+              
+            </tbody>
+          </table> -->

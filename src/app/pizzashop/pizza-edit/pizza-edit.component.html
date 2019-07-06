@@ -1,0 +1,12 @@
+<p>emp-update works!</p>
+<div class="container">
+   <div class="row" >
+        <input type="text" name="pizzaId" [(ngModel)]="pizzashop.pizzaId"/>
+        <input type="text" name="pizzaName" [(ngModel)]="pizzashop.pizzaName"/>
+        <input type="text" name="price" [(ngModel)]="pizzashop.price"/>
+        <div class="col-md-2">
+            <button (click)="updatePizzashop(pizzashop.pizzaId,pizzashop.price)">Edit</button>
+        </div>    
+    </div>
+
+</div>
